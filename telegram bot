@@ -1,0 +1,45 @@
+// pip install python-telegram-bot,pip install telegram            
+import telegram.ext
+with open('C:\\Users\\rohit\\Desktop\\python\\.vscode\\token.txt', 'r')as f:
+    TOKEN = f.read()
+
+
+def start(update, context):
+    update.message.reply_text("HELLO! WELCOME TO GOVROBOT")
+
+
+def help(update, context):
+    update.message.reply_text("""the following command avaliable:
+    /start -> Welcom message
+    /help-> this message
+    /content-> information
+    /contant->information about contact""")
+
+
+def content(update, context):
+    update.message.reply_text("We have videos https: // ssc.nic. in ")
+
+
+def contant(update, context):
+    update.message.reply_text(
+        "you can contact me on 9538869220 and my emailrohit https: // ssc.nic. in /")
+
+
+def ssb(update, context):
+    update.message.reply_text("We have videos https: // ssc.nic. in ")
+
+
+# def handel_message(update ,context):
+#     update.message.reply_text(f"you said{update.message.text}")
+
+updater = telegram.ext.Updater(TOKEN, use_context=True)
+disp = updater.dispatcher
+disp.add_handler(telegram.ext.CommandHandler("start", start))
+disp.add_handler(telegram.ext.CommandHandler("help", help))
+disp.add_handler(telegram.ext.CommandHandler("content", content))
+disp.add_handler(telegram.ext.CommandHandler("contact", contant))
+disp.add_handler(telegram.ext.CommandHandler("contact", ssb))
+# disp.add_handler(telegram.ext.CommandHandler(telegram.ext.Filters.text ,handel_message))
+updater.start_polling()
+
+updater.idle()
