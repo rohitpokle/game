@@ -1,0 +1,32 @@
+# import tkinter as tk
+# from tkinter import simpledialog
+# ROOT = tk.Tk()
+# ROOT.withdraw()
+#     # the input dialog
+# Uname= simpledialog.askstring(title="Hey Buddy",
+#                               prompt="Will you  please enter your good name")
+# from Tkinter import tinker as tk
+
+# root = Tk()
+
+# w = Label(root, text="Hello, world!")
+# w.pack()
+
+# root.mainloop()
+# from tkinter import *
+# import tkinter
+
+# top = Tk()
+
+# def helloCallBack():
+#    print( "Hello Python", "Hello World")
+
+# B = tkinter.Button(top, text ="Hello", command = helloCallBack)
+
+# B.pack()
+# top.mainloop()
+import matplotlib.pyplot as plt
+x=[24,24,26]
+y =[23,24,25]
+plt.plot(x,y)
+plt.show()
