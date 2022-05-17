@@ -1,0 +1,6 @@
+import matplotlib.pyplot as plt
+
+x =[45.5,36,55]
+y =[45.6,56,65]
+plt.plot(x,y)
+plt.show()
