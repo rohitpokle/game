@@ -1,0 +1,14 @@
+from curses.ascii import FF
+from pickle import TRUE
+import cv2
+from numpy import imag
+vs=cv2.VideoCapture(0)
+while TRUE:                 #continues loop
+    _,imag=vs.read()          #we can put any name else_ ,reading the frame from the camera
+    cv2.imshow("videostream",imag)
+    key=cv2.waitkey(1)&0*FF
+    if key==ord("q"):
+        break
+
+vs.release()
+cv2.destroyAllWindows()
